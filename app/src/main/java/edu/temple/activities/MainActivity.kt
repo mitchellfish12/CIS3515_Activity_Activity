@@ -45,7 +45,7 @@ class TextSizeAdapter (private val textSizes: Array<Int>, private val callback: 
     inner class TextSizeViewHolder(val textView: TextView) : RecyclerView.ViewHolder (textView) {
         init {
             textView.setOnClickListener {
-                callback(textSize())
+                callback(textSizes[adapterPosition])
             }
         }
     }
